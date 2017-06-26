@@ -1,0 +1,6 @@
+---
+
+- name: show the message
+  copy:
+    src: foo.conf
+    dest: /etc/tmp/foo.conf
