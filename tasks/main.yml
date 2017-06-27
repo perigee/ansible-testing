@@ -1,6 +1,13 @@
 ---
 
+- name: create path
+  file:
+    path: /etc/tmp
+    state: directory
+    mode: 0755
+
 - name: show the message
-  copy:
-    src: foo.conf
+  template:
+    src: foo.conf.j2
     dest: /etc/tmp/foo.conf
+    mode: 0755
