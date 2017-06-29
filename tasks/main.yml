@@ -6,8 +6,8 @@
     host: host="{{ ansible_ssh_host }}"
     port: 22
     search_regex: OpenSSH
-    delay: 10
-    timeout: 600
+    delay: 30
+    timeout: 120
   sudo: no
 
 - name: create path
