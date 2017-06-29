@@ -1,15 +1,5 @@
 ---
 
-- name: waiting for ssh
-  local_action:
-    module: wait_for
-    host: host="{{ ansible_ssh_host }}"
-    port: 22
-    search_regex: OpenSSH
-    delay: 30
-    timeout: 120
-  sudo: no
-
 - name: create path
   file:
     path: /etc/tmp
